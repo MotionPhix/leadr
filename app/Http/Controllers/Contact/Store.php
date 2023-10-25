@@ -20,6 +20,8 @@ class Store extends Controller
   {
     $validated_contact = $request->validated();
 
+    $validated_contact['user_id'] = $request->user()->id;
+
     $contact = Contact::create($validated_contact);
 
     if (isset($validated_contact['phones'])) {

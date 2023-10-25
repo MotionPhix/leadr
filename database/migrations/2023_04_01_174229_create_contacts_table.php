@@ -24,8 +24,8 @@ return new class extends Migration
 
       $table->unique(['first_name', 'last_name', 'email']);
 
-      $table->foreignId('company_id')->index()->constrained('companies')->cascadeOnDelete();
-      $table->foreignId('user_id')->index()->nullable()->constrained('users');
+      $table->foreignId('company_id')->index()->nullable()->constrained('companies')->cascadeOnDelete();
+      $table->foreignId('user_id')->index()->constrained('users');
 
       $table->timestamps();
     });

@@ -18,15 +18,15 @@
 
   </x-slot>
 
-  <section class="max-w-full px-6 py-12 mx-auto space-y-6 sm:px-0">
+  <section class="grid max-w-full grid-cols-2 gap-4 px-6 py-12 mx-auto space-y-6 sm:px-0">
 
     @forelse ($contacts as $contact)
 
-      <x-contact-card :contact="$contact" />
+      <x-company-card :contact="$contact" />
 
     @empty
 
-      <article class="flex flex-col items-center gap-4 py-10 text-gray-500">
+      <article class="flex flex-col items-center col-span-2 gap-4 py-10 text-gray-500">
 
         <x-tabler-id
           stroke-width="1.5"

@@ -26,8 +26,8 @@ class ContactStoreRequest extends FormRequest
     return [
       'first_name' => 'required',
       'last_name' => 'required',
-      'email' => 'required|email:rns|unique:contacts,email,except,id',
-      'company_id' => 'required|exists:companies,id',
+      'email' => 'required|email:rfc,dns|unique:contacts,email,except,id',
+      'company_id' => 'nullable|exists:companies,id',
       'phones' => 'sometimes|nullable',
       'phones.*.type' => 'required|in:work,mobile,office',
       'phones.*.number' => 'required|string',
