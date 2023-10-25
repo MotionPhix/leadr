@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: 120,84,246;
+    --color-text-muted: 11,14,47;
+    --color-text-inverted: 126,197,48;
+    --color-fill: 238,61,68;
+    --color-button-accent: 166,40,242;
+    --color-button-accent-hover: 239,203,42;
+    --color-button-muted: 52,191,200;
+  }
+
+  .theme-neon {
+    --color-text-base: 17,24,2;
+    --color-text-muted: 47,67,6,1;
+    --color-text-inverted: 235,250,204;
+    --color-fill: 179,255,23;
+    --color-button-accent: 36,52,3;
+    --color-button-accent-hover: 55,79,5;
+    --color-button-mutted: 212,255,122;
+  }
+}
